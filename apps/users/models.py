@@ -21,7 +21,7 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
-    username = models.CharField(max_length=150, blank=True, null=True)  # Optional username
+    username = models.CharField(max_length=150, blank=True, null=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []  # Remove username from required fields
